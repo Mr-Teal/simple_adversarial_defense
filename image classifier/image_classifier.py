@@ -3,6 +3,7 @@ from keras.applications import resnet, vgg19, inception_v3
 import numpy as np
 import random
 
+# randomly choose model(resnet, vgg19, or inception_v3)
 random.seed()
 r = random.randint(1, 3)
 if r==1:
@@ -12,7 +13,7 @@ elif r==2:
 else:
     model = inception_v3.InceptionV3(weights="imagenet")
 
-#read image
+# read image and predict
 img = 
 x = keras.utils.img_to_array(img)
 x = np.expand_dims(x, axis=0)
@@ -25,5 +26,5 @@ else:
 y = model.predict(x)
 pred = resnet.decode_predictions(y, top = 3)[0]
 
-#output
+# output
 #print(pred)

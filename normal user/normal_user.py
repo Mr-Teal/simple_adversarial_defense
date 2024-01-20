@@ -2,6 +2,7 @@ from keras.datasets import cifar10
 from keras.datasets import mnist
 import random
 
+# get random image from dataset(cifar10 or mnist)
 random.seed()
 r = random.randint(0, 1)
 if r==0:
@@ -11,3 +12,5 @@ else:
 random.seed()
 index = random.randint(0, len(y_train) - 1)
 img = x_train[index, :]
+
+# submit the image
