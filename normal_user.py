@@ -1,5 +1,3 @@
-from keras.datasets import cifar10
-from keras.datasets import mnist
 import random
 
 class NormalUserInterface:
